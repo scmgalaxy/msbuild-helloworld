@@ -1,0 +1,21 @@
+       <project name="Hello World" default="build" basedir="." xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd">
+        
+        <description>The Hello World of build files.</description>
+        
+        <property name="debug" value="true" overwrite="false" />
+        
+        <target name="clean" description="remove all generated files">
+            <delete file="build/HelloWorld.exe" failonerror="false" />
+            <delete file="build/HelloWorld.pdb" failonerror="false" />
+            <delete dir="build" failonerror="false" />     
+            
+    	</target>
+        
+        <target name="build" description="compiles the source code" depends="clean">
+            <csc target="exe" output="build\HelloWorld.exe" debug="${debug}">
+                <sources>
+                    <includes name="src\HelloCS.cs" />
+                </sources>
+            </csc>
+        </target>
+    </project>
