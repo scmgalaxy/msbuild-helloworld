@@ -2,7 +2,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
     <ItemGroup>
-		<Compile Include="src/HelloCS.cs" />
+		<Compile Include="src\HelloCS.cs" />
 	</ItemGroup>
   
 	<Target Name="Build">
